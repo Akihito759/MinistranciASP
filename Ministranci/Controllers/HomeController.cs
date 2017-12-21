@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,7 +37,14 @@ namespace Ministranci.Controllers
 
         public ActionResult Shifts()
         {
-            return View();
+            var beginingDate = new DateTime(2017, 12, 18);
+            var dateList = new List<DateTime>();
+
+            for (int i = 0; i < 7; i++)
+            {
+                dateList.Add(beginingDate.AddDays(i));
+            }
+            return View(dateList);
         }
         
         public ActionResult Groups()
