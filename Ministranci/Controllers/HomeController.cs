@@ -37,10 +37,10 @@ namespace Ministranci.Controllers
 
         public ActionResult Shifts()
         {
-            var beginingDate = new DateTime(2017, 12, 18);
+            var beginingDate = new DateTime(2017, 12, 24);
             var dateList = new List<DateTime>();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 8; i++)
             {
                 dateList.Add(beginingDate.AddDays(i));
             }
