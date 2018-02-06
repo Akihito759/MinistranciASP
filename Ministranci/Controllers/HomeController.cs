@@ -1,3 +1,5 @@
+using Ministranci.Builder;
+using Ministranci.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +39,7 @@ namespace Ministranci.Controllers
 
         public ActionResult Shifts()
         {
-            var beginingDate = new DateTime(2017, 12, 24);
+            var beginingDate = new DateTime(2018, 1, 21);
             var dateList = new List<DateTime>();
 
             for (int i = 0; i < 8; i++)
@@ -60,6 +62,19 @@ namespace Ministranci.Controllers
         public ActionResult Contact()
         {
             return View("_Temp");
+        }
+
+        public ActionResult HolyMassCreator()
+        {
+            return View();
+        }
+        public String Test(Dictionary<int,List<HolyMass>> dictionary,string date)
+        {
+            var x = new DailyHolyMassCreator(new DateTime(2018, 6, 2));
+            var z = x.GetWeekHolyMassShifts(dictionary);
+            string Json = null;
+
+            return Json;
         }
 
 

@@ -1,0 +1,52 @@
+﻿@model Ministranci.Models.HolyMass
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+@using (Html.BeginForm("Test","Home")) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <input type="number" name="dictionary[0].Key" value="0" />
+    <input type="number" name="dictionary[1].Key" value="1" />
+    <input type="number" name="dictionary[2].Key" value="2" />
+    <input type="number" name="dictionary[3].Key" value="3" />
+    <input type="number" name="dictionary[4].Key" value="4" />
+    <input type="number" name="dictionary[5].Key" value="5" />
+    <input type="number" name="dictionary[6].Key" value="6" />
+    <input type="text" name="dictionary[0].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[0].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[1].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[1].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[2].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[2].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[3].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[3].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[4].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[4].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[5].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[5].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[6].Value[0].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[6].Value[0].Group" value="Computer Software" />
+    <input type="text" name="dictionary[6].Value[1].Time" value="Microsoft Corporation" />
+    <input type="text" name="dictionary[6].Value[1].Group" value="Computer Software" />
+
+    <h4>HolyMass</h4>
+    <hr />
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
